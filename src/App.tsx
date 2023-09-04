@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './App.css'
 
 const generateRandomNumber = (): number => Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000
 
@@ -48,6 +47,12 @@ const App = () => {
       }
   }
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handlePrimeOperatorButton()
+    }
+  }
+
   const handlePrimeOperatorButton = () => {
       try {
           const primeNumbers = findPrimes(inputValue)
@@ -74,6 +79,7 @@ const App = () => {
         defaultValue={inputValue}
         value={inputValue}
         onChange={handleInputChange}
+        onKeyPress={handleKeyPress}
       />
       <button onClick={handleCreateButton}>Generate Random Number</button>
       <button onClick={handlePrimeOperatorButton}>Find all Primes</button>
