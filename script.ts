@@ -10,7 +10,7 @@ const generateRandomNumber = (): number => Math.floor(Math.random() * (99999 - 1
 
 const findPrimes = (value: number | undefined): number[] | null => {
   if (value === undefined) return null
-  if (value <= 1) {
+  if (value <= 9999) {
     return []
   }
 
@@ -41,6 +41,8 @@ const findPrimes = (value: number | undefined): number[] | null => {
   return primes
 }
 
+// -------------------------------------------------
+
 let randomNumber: number | null = null;
 
 numberInput.addEventListener('input', () => {
@@ -53,8 +55,6 @@ numberInput.addEventListener('input', () => {
         errorDiv.textContent = 'Please enter a valid number.'
     }
 })
-
-// -------------------------------------------------
 
 button1.addEventListener('click', () => {
     randomNumber = generateRandomNumber()
