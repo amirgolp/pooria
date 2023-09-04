@@ -46,7 +46,6 @@ const App = () => {
       } catch (e) {
           console.log(e)
       }
-
   }
 
   const handlePrimeOperatorButton = () => {
@@ -56,7 +55,6 @@ const App = () => {
       } catch (e) {
           console.log(e)
       }
-
   }
 
   const handleCreateButton = () => {
