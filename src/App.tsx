@@ -61,7 +61,6 @@ const App = () => {
 
   const handleCreateButton = () => {
     const generatedValue = generateRandomNumber()
-    console.log(generatedValue)
     setInputValue(generatedValue)
   }
 
