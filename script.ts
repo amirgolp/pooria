@@ -8,8 +8,8 @@ const errorDiv = document.getElementById('error') as HTMLDivElement
 
 const generateRandomNumber = (): number => Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000
 
-const findPrimes = (value: number | undefined): number[] | null => {
-  if (value === undefined) return null
+const findPrimes = (value: number | undefined): number[] => {
+  if (value === undefined) return 0
   if (value <= 9999) {
     return []
   }
@@ -43,7 +43,7 @@ const findPrimes = (value: number | undefined): number[] | null => {
 
 // -------------------------------------------------
 
-let randomNumber: number | null = null;
+let randomNumber: number = 0
 
 numberInput.addEventListener('input', () => {
     const inputValue = numberInput.value.trim()
@@ -67,6 +67,6 @@ button2.addEventListener('click', () => {
 })
 
 button3.addEventListener('click', () => {
-    randomNumber = null
+    randomNumber = 0
     numberInput.valueAsNumber = randomNumber
 })
